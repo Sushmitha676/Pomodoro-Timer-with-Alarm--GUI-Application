@@ -92,9 +92,9 @@ def count_down(count):
         timer=window.after(1000, count_down, count-1)     # Decrease time every second
     else:
         if reps % 8 == 0 or reps % 2 == 0:  # After break phase
-            play_sound(r"D:\Python's -- 100 Days of Code\Music\bedside-clock-alarm-95792.mp3", start_timer)
+            play_sound(r"alarm-95792.mp3", start_timer)
         else:  # After work phase
-            play_sound(r"D:\Python's -- 100 Days of Code\Music\cyber-alarms-synthesized-116358.mp3", start_timer)
+            play_sound(r"cyber-alarms-synthesized-116358.mp3", start_timer)
 #Create the main window
 window=Tk()
 window.title("Pomodoro")
@@ -107,7 +107,7 @@ title_label.grid(column=1, row=0)
 #Canvas & image
 canvas=Canvas(width=400, height=400, bg=BLACK, highlightthickness=0)
 #Load and resize the pomodoro image
-pomodoro_image=Image.open(r"D:\Python's -- 100 Days of Code\Python's 100 days of code\Intermediate level\Day 28 - Tkinter, Dynamic Typing and the Pomodoro GUI Application\tomato.png")
+pomodoro_image=Image.open(r"tomato.png")
 pomodoro_image=pomodoro_image.resize((200, 200))
 rotated_image=ImageTk.PhotoImage(pomodoro_image)
 image_id=canvas.create_image(200, 200, image=rotated_image)
